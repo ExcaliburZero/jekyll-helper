@@ -30,14 +30,21 @@ class JekyllHelperWindow(Window):
         self.serveSwitch = self.builder.get_object("serveSwitch")
 
     # Jekyll serve functions
+    global is_serving
+    is_serving = False
+
     def jekyll_serve_on(self):
         """Begin serving website through Jekyll"""
         print("Jekyll Serve On")
+        global is_serving
+        is_serving = True
         return;
 
     def jekyll_serve_off(self):
         """End serving website through Jekyll"""
         print("Jekyll Serve Off")
+        global is_serving
+        is_serving = False
         return;
 
     def on_serveSwitch_stateset(self, widget, state):
@@ -49,3 +56,5 @@ class JekyllHelperWindow(Window):
             self.jekyll_serve_off();
         else:
             print("Error triggering Jekyll Serve")
+        print("Is Serving: " + str(is_serving))
+        return;
