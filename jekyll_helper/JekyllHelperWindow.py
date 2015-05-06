@@ -26,23 +26,39 @@ class JekyllHelperWindow(Window):
 
         # Code for other initialization actions should be added here.
 
-        # Initialize serve switch
+        # Switches and Buttons
+        self.directoryChooser =  self.builder.get_object("directoryChooser")
         self.serveSwitch = self.builder.get_object("serveSwitch")
+
+    # Set directory that stores the Jekyll website
+    global site_directory
+    site_directory = ""
+
+    def set_website_directory(self, user_data):
+        """Set the website's directory location."""
+        print("Set Directory")
+        print(str(user_data))
+        global site_directory
+        site_directory = self.directoryChooser.get_current_folder()
+        print(site_directory)
+        return;
 
     # Jekyll serve functions
     global is_serving
     is_serving = False
 
     def jekyll_serve_on(self):
-        """Begin serving website through Jekyll"""
-        print("Jekyll Serve On")
+        """Begin serving website through Jekyll."""
+        global site_directory
+        print("Jekyll Serve On: " + site_directory)
         global is_serving
         is_serving = True
         return;
 
     def jekyll_serve_off(self):
-        """End serving website through Jekyll"""
-        print("Jekyll Serve Off")
+        """End serving website through Jekyll."""
+        global site_directory
+        print("Jekyll Serve Off: " + site_directory)
         global is_serving
         is_serving = False
         return;
