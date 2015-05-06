@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=Jekyll Helper
+_Comment=JekyllHelper application
+Categories=GNOME;Utility;
+Exec=jekyll-helper
+Icon=jekyll-helper
+Terminal=false
+Type=Application
