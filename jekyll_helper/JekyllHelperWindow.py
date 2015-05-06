@@ -16,7 +16,7 @@ from jekyll_helper.PreferencesJekyllHelperDialog import PreferencesJekyllHelperD
 # See jekyll_helper_lib.Window.py for more details about how this class works
 class JekyllHelperWindow(Window):
     __gtype_name__ = "JekyllHelperWindow"
-    
+
     def finish_initializing(self, builder): # pylint: disable=E1002
         """Set up the main window"""
         super(JekyllHelperWindow, self).finish_initializing(builder)
@@ -26,3 +26,26 @@ class JekyllHelperWindow(Window):
 
         # Code for other initialization actions should be added here.
 
+        # Initialize serve switch
+        self.serveSwitch = self.builder.get_object("serveSwitch")
+
+    # Jekyll serve functions
+    def jekyll_serve_on(self):
+        """Begin serving website through Jekyll"""
+        print("Jekyll Serve On")
+        return;
+
+    def jekyll_serve_off(self):
+        """End serving website through Jekyll"""
+        print("Jekyll Serve Off")
+        return;
+
+    def on_serveSwitch_stateset(self, widget, state):
+        """Begin or end serving website through Jekyll based on the serveSwitch value."""
+        print("Serve: " + str(state))
+        if (state == True):
+            self.jekyll_serve_on();
+        elif (state == False):
+            self.jekyll_serve_off();
+        else:
+            print("Error triggering Jekyll Serve")

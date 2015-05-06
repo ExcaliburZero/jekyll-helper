@@ -235,17 +235,13 @@
           <object class="GtkLabel" id="label1">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="xpad">30</property>
-            <property name="ypad">5</property>
-            <property name="label" translatable="yes">Your application has been created!
-
-To start changing this user interface, run 'quickly design', which will open Glade so you can edit the default windows and dialogs.
-
-To change the behavior and edit the python code, run 'quickly edit', which will bring up a text editor.</property>
+            <property name="xpad">22</property>
+            <property name="ypad">8</property>
+            <property name="label" translatable="yes">Jekyll Helper</property>
             <property name="wrap">True</property>
           </object>
           <packing>
-            <property name="expand">True</property>
+            <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">1</property>
           </packing>
@@ -255,13 +251,13 @@ To change the behavior and edit the python code, run 'quickly edit', which will 
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <child>
-              <object class="GtkLabel" id="serve-label">
+              <object class="GtkLabel" id="serveLabel">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="margin_right">56</property>
                 <property name="label" translatable="yes">Serve</property>
                 <property name="ellipsize">start</property>
-                <property name="width_chars">44</property>
+                <property name="width_chars">9</property>
               </object>
               <packing>
                 <property name="resize">False</property>
@@ -269,9 +265,12 @@ To change the behavior and edit the python code, run 'quickly edit', which will 
               </packing>
             </child>
             <child>
-              <object class="GtkSwitch" id="serve-switch">
+              <object class="GtkSwitch" id="serveSwitch">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
+                <property name="halign">start</property>
+                <property name="valign">start</property>
+                <signal name="state-set" handler="on_serveSwitch_stateset" swapped="no"/>
               </object>
               <packing>
                 <property name="resize">True</property>
