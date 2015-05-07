@@ -5,6 +5,10 @@
 
 from locale import gettext as _
 
+import subprocess
+from subprocess import call, PIPE
+from threading import Thread
+
 from gi.repository import Gtk # pylint: disable=E0611
 import logging
 logger = logging.getLogger('jekyll_helper')
@@ -12,6 +16,32 @@ logger = logging.getLogger('jekyll_helper')
 from jekyll_helper_lib import Window
 from jekyll_helper.AboutJekyllHelperDialog import AboutJekyllHelperDialog
 from jekyll_helper.PreferencesJekyllHelperDialog import PreferencesJekyllHelperDialog
+
+# Class for Jekyll serving
+class JekyllServer(Thread):
+    def __init__(self):
+      Thread.__init__(self)
+
+    # General functions
+
+    # Safely run commands: written by Kilian for Trimage (MIT)
+    def safe_call(self, command):
+        """ cross-platform command-line check """
+        while True:
+            try:
+                return call(command, shell=True, stdout=PIPE)
+            except OSError, e:
+                if e.errno == errno.EINTR:
+                    continue
+                else:
+                    raise
+
+
+    def start(self):
+        self.safe_call("cd \"" + site_directory + "\"" + " && " + "jekyll serve")
+
+    def end(self):
+        self.safe_call("^C")
 
 # See jekyll_helper_lib.Window.py for more details about how this class works
 class JekyllHelperWindow(Window):
@@ -30,6 +60,20 @@ class JekyllHelperWindow(Window):
         self.directoryChooser =  self.builder.get_object("directoryChooser")
         self.serveSwitch = self.builder.get_object("serveSwitch")
 
+    # General functions
+
+    # Safely run commands: written by Kilian for Trimage (MIT)
+    def safe_call(self, command):
+        """ cross-platform command-line check """
+        while True:
+            try:
+                return call(command, shell=True, stdout=PIPE)
+            except OSError, e:
+                if e.errno == errno.EINTR:
+                    continue
+                else:
+                    raise
+
     # Set directory that stores the Jekyll website
     global site_directory
     site_directory = ""
@@ -47,10 +91,15 @@ class JekyllHelperWindow(Window):
     global is_serving
     is_serving = False
 
+    global j_serve
+    j_serve = JekyllServer()
+
     def jekyll_serve_on(self):
         """Begin serving website through Jekyll."""
         global site_directory
         print("Jekyll Serve On: " + site_directory)
+        global j_serve
+        j_serve.start()
         global is_serving
         is_serving = True
         return;
@@ -59,6 +108,8 @@ class JekyllHelperWindow(Window):
         """End serving website through Jekyll."""
         global site_directory
         print("Jekyll Serve Off: " + site_directory)
+        global j_serve
+        j_serve.end()
         global is_serving
         is_serving = False
         return;
