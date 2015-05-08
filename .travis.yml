@@ -1,14 +1,15 @@
 language: python
 python:
-  - "2.6"
   - "2.7"
   - "3.2"
-  - "3.3"
-  - "3.4"
-  - "nightly"
+# allow python dependencies to be installed via apt-get
+virtualenv:
+  system_site_packages: true
 # command to install dependencies
 install:
   - pip install --upgrade pip
+  - sudo apt-get update
+  - sudo apt-get install -qq ibus python3-gi gir1.2-ibus-1.0 gir1.2-wnck-3.0
   - "pip install -r requirements.txt"
 # command to run tests
 script: nosetests
