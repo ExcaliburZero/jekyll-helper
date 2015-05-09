@@ -30,7 +30,7 @@ class JekyllServer(Thread):
         while True:
             try:
                 return call(command, shell=True, stdout=PIPE)
-            except OSError, e:
+            except OSError as e:
                 if e.errno == errno.EINTR:
                     continue
                 else:
@@ -68,7 +68,7 @@ class JekyllHelperWindow(Window):
         while True:
             try:
                 return call(command, shell=True, stdout=PIPE)
-            except OSError, e:
+            except OSError as e:
                 if e.errno == errno.EINTR:
                     continue
                 else:
