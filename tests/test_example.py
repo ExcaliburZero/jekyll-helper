@@ -19,8 +19,9 @@ class TestExample(unittest.TestCase):
     def test_AboutJekyllHelperDialog_members(self):
         all_members = dir(AboutJekyllHelperDialog)
         public_members = [x for x in all_members if not x.startswith('_')]
+        public_members.extend(['gettext'])
         public_members.sort()
         self.assertEqual(self.AboutJekyllHelperDialog_members, public_members)
 
-if __name__ == '__main__':    
+if __name__ == '__main__':
     unittest.main()
