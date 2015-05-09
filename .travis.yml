@@ -14,7 +14,7 @@ before_install:
 install:
   - pip install --upgrade pip
   - sudo apt-get update
-  - sudo apt-get install -qq ibus python3-gi gir1.2-ibus-1.0 gir1.2-wnck-3.0 python-cairo
+  - sudo apt-get install -qq ibus python3-gi gir1.2-ibus-1.0 gir1.2-wnck-3.0 python-cairo pylint
   - "pip install -r requirements.txt"
 # command to run tests
 script: nosetests
