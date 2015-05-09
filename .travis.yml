@@ -16,5 +16,10 @@ install:
   - sudo apt-get update
   - sudo apt-get install -qq ibus python3-gi gir1.2-ibus-1.0 gir1.2-wnck-3.0 python-cairo pylint
   - "pip install -r requirements.txt"
+  - pip install coveralls
 # command to run tests
-script: nosetests
+script:
+  - nosetests  --with-coverage --cover-package=jekyll_helper
+# run coveralls
+after_success:
+  - coveralls
