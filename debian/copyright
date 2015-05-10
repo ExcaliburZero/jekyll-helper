@@ -1,0 +1,8 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: jekyll-helper
+Upstream-Contact: Christopher Wells <cwellsny@nycap.rr.com>
+Source: https://launchpad.net/jekyll-helper
+
+Files: *
+Copyright: (C) 2015 <Christopher Wells> <cwellsny@nycap.rr.com>
+License: MIT
