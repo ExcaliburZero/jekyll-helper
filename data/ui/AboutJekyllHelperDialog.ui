@@ -8,8 +8,9 @@
     <property name="icon">../media/jekyll-helper.svg</property>
     <property name="type_hint">normal</property>
     <property name="program_name">Jekyll Helper</property>
-    <property name="authors"></property>
+    <property name="authors">Christopher Wells</property>
     <property name="logo">../media/jekyll-helper.svg</property>
+    <property name="license">Jekyll Helper is licensed under The MIT License.</property>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox1">
         <property name="visible">True</property>
