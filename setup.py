@@ -118,7 +118,7 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
         update_desktop_file(desktop_file, target_pkgdata, target_scripts)
         compile_schemas(self.root, target_data)
 
-        
+
 ##################################################################################
 ###################### YOU SHOULD MODIFY ONLY WHAT IS BELOW ######################
 ##################################################################################
@@ -126,12 +126,11 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
 DistUtilsExtra.auto.setup(
     name='jekyll-helper',
     version='0.1',
-    #license='GPL-3',
-    #author='Your Name',
-    #author_email='email@ubuntu.com',
-    #description='UI for managing …',
-    #long_description='Here a longer description',
-    #url='https://launchpad.net/jekyll-helper',
+    license='MIT',
+    author='Christopher Wells',
+    author_email='cwellsny@nycap.rr.com',
+    description='GUI for Jekyll',
+    long_description='A program that serves as a basic GUI for Jekyll',
+    url='https://launchpad.net/jekyll-helper',
     cmdclass={'install': InstallAndUpdateDataDirectory}
     )
-

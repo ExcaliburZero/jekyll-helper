@@ -7,12 +7,12 @@
   <title type="text">Jekyll Helper</title>
   <desc>The <app>Jekyll Helper</app> help.</desc>
   <credit type="author">
-    <name>Your Name</name>
-    <email>Your E-mail</email>
-    <years>2010</years>
+    <name>Christopher Wells</name>
+    <email>cwellsny@nycap.rr.com</email>
+    <years>2015</years>
   </credit>
-  <license href="http://creativecommons.org/licenses/by-sa/3.0/">
-  <p>Creative Commons Attribution-Share Alike 3.0 Unported License</p>
+  <license href="http://opensource.org/licenses/MIT">
+  <p>MIT</p>
   </license>
 </info>
 
@@ -23,7 +23,7 @@
 <app>Jekyll Helper</app> Help
 </title>
 
-<p>This is an example guide page. It's main function is to link together the help topics.</p>
+<p>Jekyll Helper is a GUI for the command line application Jekyll.</p>
 
 <!-- This is the visible index -->
 <section id="contents" style="2column">
