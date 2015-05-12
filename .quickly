@@ -1,3 +1,5 @@
 project = jekyll-helper
 version = 12.08.1
 template = ubuntu-application
+lp_id = jekyll-helper
+ppa = jekyll-helper

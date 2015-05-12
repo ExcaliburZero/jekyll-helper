@@ -1,16 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires about_jekyll_helper_dialog 1.0 -->
   <!-- interface-requires gtk+ 3.0 -->
   <object class="AboutJekyllHelperDialog" id="about_jekyll_helper_dialog">
-    <property name="can_focus">False</property>
+    <property name="version">0.1</property><property name="copyright" translatable="yes">Copyright (C) 2015 &lt;Christopher Wells&gt; &lt;cwellsny@nycap.rr.com&gt;</property><property name="website">https://launchpad.net/jekyll-helper</property><property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="icon">../media/jekyll-helper.svg</property>
     <property name="type_hint">normal</property>
     <property name="program_name">Jekyll Helper</property>
-    <property name="authors">Christopher Wells</property>
+    <property name="authors">Copyright (C) 2015 &lt;Christopher Wells&gt; &lt;cwellsny@nycap.rr.com&gt;</property>
     <property name="logo">../media/jekyll-helper.svg</property>
-    <property name="license">Jekyll Helper is licensed under The MIT License.</property>
+    <property name="license"># Copyright (C) 2015 &lt;Christopher Wells&gt; &lt;cwellsny@nycap.rr.com&gt;
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+# 
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+</property>
     <child internal-child="vbox">
       <object class="GtkBox" id="dialog-vbox1">
         <property name="visible">True</property>
