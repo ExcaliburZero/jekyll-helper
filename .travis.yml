@@ -17,6 +17,10 @@ install:
   - sudo apt-get install -qq ibus python3-gi gir1.2-ibus-1.0 gir1.2-wnck-3.0 python-cairo pylint
   - "pip install -r requirements.txt"
   - pip install coveralls
+  # Install schema for program
+  - cd data
+  - cd glib-2.0
+  - glib-compile-schemas schemas
 # command to run tests
 script:
   - nosetests  --with-coverage --cover-package=jekyll_helper

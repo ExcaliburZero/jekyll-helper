@@ -7,10 +7,10 @@
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions:
-# 
+#
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
-# 
+#
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -21,6 +21,8 @@
 ### END LICENSE
 
 from locale import gettext as _
+
+from gi.repository import Gio # pylint: disable=E0611
 
 import os
 import signal
@@ -56,6 +58,10 @@ class JekyllHelperWindow(Window):
 
     # General functions
 
+    # Pull in program settings
+    global settings
+    settings = Gio.Settings("net.launchpad.jekyll-helper")
+
     # Set directory that stores the Jekyll website
     global site_directory
     site_directory = ""
@@ -78,9 +84,15 @@ class JekyllHelperWindow(Window):
         """Begin serving website through Jekyll."""
         global site_directory
         print("Jekyll Serve On: " + site_directory)
-        global jekyll_serve
-        args = ['jekyll serve']
+
+        # Get serve command from settings
+        global settings
+        print("Jekyll Serve Command: " + settings.get_string("serve-command"))
+        args = [ settings.get_string("serve-command") ]
         print(args)
+
+        # Serve website
+        global jekyll_serve
         jekyll_serve = Popen(args, cwd=site_directory, shell=True, stdin=PIPE, stdout=PIPE, preexec_fn=os.setsid)
         global is_serving
         is_serving = True
