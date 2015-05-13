@@ -1,3 +1,4 @@
+sudo: required
 language: python
 python:
   - "2.7"
@@ -20,7 +21,12 @@ install:
   # Install schema for program
   - cd data
   - cd glib-2.0
-  - glib-compile-schemas schemas
+  - cd schemas
+  - sudo cp net.launchpad.jekyll-helper.gschema.xml /usr/share/glib-2.0/schemas
+  - sudo /usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas
+  - cd ..
+  - cd ..
+  - cd ..
 # command to run tests
 script:
   - nosetests  --with-coverage --cover-package=jekyll_helper
