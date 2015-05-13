@@ -4,7 +4,12 @@
     <key name="serve-command" type="s">
       <default>'jekyll serve'</default>
       <summary>Serve button command</summary>
-      <description>The command that is run when the serve button is click on.</description>
+      <description>The command that is run when the serve button is clicked on.</description>
+    </key>
+    <key name="build-command" type="s">
+      <default>'jekyll build'</default>
+      <summary>Build button command</summary>
+      <description>The command that is run when the build button is clicked on.</description>
     </key>
   </schema>
 </schemalist>

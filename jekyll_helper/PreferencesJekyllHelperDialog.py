@@ -44,7 +44,11 @@ class PreferencesJekyllHelperDialog(PreferencesDialog):
 
         # Bind each preference widget to gsettings
         settings = Gio.Settings("net.launchpad.jekyll-helper")
+        # Serve command
         widget = self.builder.get_object('serve_command_entry')
         settings.bind("serve-command", widget, "text", Gio.SettingsBindFlags.DEFAULT)
+        # Build command
+        widget = self.builder.get_object('build_command_entry')
+        settings.bind("build-command", widget, "text", Gio.SettingsBindFlags.DEFAULT)
 
         # Code for other initialization actions should be added here.

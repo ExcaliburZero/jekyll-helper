@@ -55,6 +55,7 @@ class JekyllHelperWindow(Window):
         # Switches and Buttons
         self.directoryChooser =  self.builder.get_object("directoryChooser")
         self.serveSwitch = self.builder.get_object("serveSwitch")
+        self.buildButton = self.builder.get_object("buildButton")
 
     # General functions
 
@@ -118,4 +119,21 @@ class JekyllHelperWindow(Window):
         else:
             print("Error triggering Jekyll Serve")
         print("Is Serving: " + str(is_serving))
+        return;
+
+    # Jekyll build function
+    def on_buildButton_clicked(self, widget):
+        """Build the website when the build button is clicked."""
+        global site_directory
+        print("Jekyll Build: " + site_directory)
+
+        # Get build command from settings
+        global settings
+        print("Jekyll Build Command: " + settings.get_string("build-command"))
+        args = [ settings.get_string("build-command") ]
+        print(args)
+
+        # Build website
+        global jekyll_build
+        jekyll_build = Popen(args, cwd=site_directory, shell=True, stdin=PIPE, stdout=PIPE, preexec_fn=os.setsid)
         return;
