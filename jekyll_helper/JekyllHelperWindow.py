@@ -52,8 +52,30 @@ class JekyllHelperWindow(Window):
 
         # Code for other initialization actions should be added here.
 
+        ####
+        # Initialization functions
+        ####
+
+        # Get user's version of Jekyll
+        def get_jekyll_version():
+            args = [ "jekyll -v" ]
+            get_version = Popen(args, shell=True, stdin=PIPE, stdout=subprocess.PIPE)
+            version = get_version.communicate()
+            return version[0];
+
+        ####
+        # Text labels
+        ####
+
+        # Declare and set the Jekyll version label
+        print("Version: " + str(get_jekyll_version()))
+        self.jekyllVersionLabel = self.builder.get_object("jekyllVersionLabel")
+        self.jekyllVersionLabel.set_text("Jekyll Version: " + str(get_jekyll_version()))
+
+        ####
         # Switches and Buttons
-        self.directoryChooser =  self.builder.get_object("directoryChooser")
+        ####
+        self.directoryChooser = self.builder.get_object("directoryChooser")
         self.serveSwitch = self.builder.get_object("serveSwitch")
         self.buildButton = self.builder.get_object("buildButton")
 
