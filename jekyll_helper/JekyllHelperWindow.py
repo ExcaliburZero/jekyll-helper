@@ -135,5 +135,6 @@ class JekyllHelperWindow(Window):
 
         # Build website
         global jekyll_build
-        jekyll_build = Popen(args, cwd=site_directory, shell=True, stdin=PIPE, stdout=PIPE, preexec_fn=os.setsid)
+        jekyll_build = Popen(args, cwd=site_directory, shell=True, stdin=PIPE, stdout=PIPE, preexec_fn=os.setsid).wait()
+        print("Sucessfully built website")
         return;
