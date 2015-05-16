@@ -185,6 +185,11 @@ hr {
   color: #b5e853;
 }
 
+.screenshot-box {
+    width: 100%;
+    text-align: center;
+}
+
 /* Buttons
 */
 
