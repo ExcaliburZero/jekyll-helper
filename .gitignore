@@ -1,4 +1,4 @@
 .bzr
 *.*~
 *.pyc
-*/gschemas.compiled
+data/glib-2.0/schemas/gschemas.compiled
