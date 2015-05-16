@@ -17,6 +17,8 @@
       <object class="GtkVBox" id="vbox1">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="margin_left">5</property>
+        <property name="margin_right">5</property>
         <property name="spacing">5</property>
         <child>
           <object class="GtkMenuBar" id="menubar1">
@@ -285,7 +287,7 @@
                 <property name="width_chars">9</property>
               </object>
               <packing>
-                <property name="resize">False</property>
+                <property name="resize">True</property>
                 <property name="shrink">True</property>
               </packing>
             </child>
@@ -293,7 +295,7 @@
               <object class="GtkSwitch" id="serveSwitch">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="halign">start</property>
+                <property name="halign">center</property>
                 <property name="valign">start</property>
                 <signal name="state-set" handler="on_serveSwitch_stateset" swapped="no"/>
               </object>
@@ -310,12 +312,35 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton" id="buildButton">
-            <property name="label" translatable="yes">Build</property>
+          <object class="GtkPaned" id="paned2">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="relief">half</property>
+            <child>
+              <object class="GtkButton" id="buildButton">
+                <property name="label" translatable="yes">Build</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="relief">half</property>
+              </object>
+              <packing>
+                <property name="resize">True</property>
+                <property name="shrink">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="pushButton">
+                <property name="label" translatable="yes">Push</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="relief">half</property>
+              </object>
+              <packing>
+                <property name="resize">True</property>
+                <property name="shrink">True</property>
+              </packing>
+            </child>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -349,20 +374,6 @@
             <property name="fill">True</property>
             <property name="pack_type">end</property>
             <property name="position">6</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkButton" id="pushButton">
-            <property name="label" translatable="yes">Push</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <property name="relief">half</property>
-          </object>
-          <packing>
-            <property name="expand">True</property>
-            <property name="fill">True</property>
-            <property name="position">7</property>
           </packing>
         </child>
       </object>
