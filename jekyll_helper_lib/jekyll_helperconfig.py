@@ -32,7 +32,7 @@ __all__ = [
 # files). By default, this is ../data, relative your trunk layout
 __jekyll_helper_data_directory__ = '../data/'
 __license__ = 'MIT'
-__version__ = 'VERSION'
+__version__ = '0.2'
 
 import os
 
