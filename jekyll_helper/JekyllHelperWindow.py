@@ -160,3 +160,21 @@ class JekyllHelperWindow(Window):
         jekyll_build = Popen(args, cwd=site_directory, shell=True, stdin=PIPE, stdout=PIPE, preexec_fn=os.setsid).wait()
         print("Sucessfully built website")
         return;
+
+    # Push website function
+    def on_pushButton_clicked(self, widget):
+        """Push the website when the push button is clicked."""
+        global site_directory
+        print("Push: " + site_directory)
+
+        # Get push command from settings
+        global settings
+        print("Push Command: " + settings.get_string("push-command"))
+        args = [ settings.get_string("push-command") ]
+        print(args)
+
+        # Push website
+        global jekyll_push
+        jekyll_push = Popen(args, cwd=site_directory, shell=True, stdin=PIPE, stdout=PIPE, preexec_fn=os.setsid).wait()
+        print("Sucessfully pushed website")
+        return;

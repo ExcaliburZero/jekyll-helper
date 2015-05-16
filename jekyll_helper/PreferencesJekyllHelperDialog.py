@@ -50,5 +50,8 @@ class PreferencesJekyllHelperDialog(PreferencesDialog):
         # Build command
         widget = self.builder.get_object('build_command_entry')
         settings.bind("build-command", widget, "text", Gio.SettingsBindFlags.DEFAULT)
+        # Push command
+        widget = self.builder.get_object('push_command_entry')
+        settings.bind("push-command", widget, "text", Gio.SettingsBindFlags.DEFAULT)
 
         # Code for other initialization actions should be added here.
