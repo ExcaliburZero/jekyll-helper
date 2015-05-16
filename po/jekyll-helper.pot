@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-09 22:35-0400\n"
+"POT-Creation-Date: 2015-05-16 10:40-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,23 +34,31 @@ msgid "_Edit"
 msgstr ""
 
 #: ../data/ui/JekyllHelperWindow.ui.h:4
-msgid "_View"
-msgstr ""
-
-#: ../data/ui/JekyllHelperWindow.ui.h:5
 msgid "_Help"
 msgstr ""
 
-#: ../data/ui/JekyllHelperWindow.ui.h:6
+#: ../data/ui/JekyllHelperWindow.ui.h:5
 msgid "Contents"
 msgstr ""
 
+#: ../data/ui/JekyllHelperWindow.ui.h:6
+msgid "Jekyll Version: "
+msgstr ""
+
 #: ../data/ui/JekyllHelperWindow.ui.h:7
-msgid "Status Area"
+msgid "Serve"
 msgstr ""
 
 #: ../data/ui/JekyllHelperWindow.ui.h:8
-msgid "Serve"
+msgid "Build"
+msgstr ""
+
+#: ../data/ui/JekyllHelperWindow.ui.h:9
+msgid "Push"
+msgstr ""
+
+#: ../data/ui/JekyllHelperWindow.ui.h:10
+msgid "Status Area"
 msgstr ""
 
 #. Code for other initialization actions should be added here.
@@ -59,9 +67,21 @@ msgid "Jekyll Helper Preferences"
 msgstr ""
 
 #: ../data/ui/PreferencesJekyllHelperDialog.ui.h:2
-msgid "_Example entry:"
+msgid "_Serve command:"
 msgstr ""
 
-#: ../jekyll_helper/__init__.py:21
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:3
+msgid "_Build command:"
+msgstr ""
+
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:4
+msgid "_Push command:"
+msgstr ""
+
+#: ../data/ui/AboutJekyllHelperDialog.ui.h:1
+msgid "Copyright (C) 2015 <Christopher Wells> <cwellsny@nycap.rr.com>"
+msgstr ""
+
+#: ../jekyll_helper/__init__.py:38
 msgid "Show debug messages (-vv debugs jekyll_helper_lib also)"
 msgstr ""
