@@ -1,10 +1,10 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: jekyll-helper
 Upstream-Contact: Christopher Wells <cwellsny@nycap.rr.com>
-Source: https://launchpad.net/jekyll-helper
+Source: https://github.com/ExcaliburZero/jekyll-helper
 
 Files: *
 Copyright: (C) 2015 <Christopher Wells> <cwellsny@nycap.rr.com>
 Copyright: (C) 2015 <Christopher Wells> &lt;cwellsny@nycap.rr.com&gt;
-Copyright: (C) 2015 <Christopher Wells> &lt;cwellsny@nycap.rr.com&gt;</property><property name="website">https://launchpad.net/jekyll-helper</property><property name="can_focus">False</property>
+Copyright: (C) 2015 <Christopher Wells> &lt;cwellsny@nycap.rr.com&gt;</property><property name="website">https://excaliburzero.github.io/jekyll-helper/</property><property name="can_focus">False</property>
 License: MIT
