@@ -23,22 +23,12 @@
 <app>Jekyll Helper</app> Help
 </title>
 
-<p>Jekyll Helper is a GUI for the command line application Jekyll.</p>
+<p><app>Jekyll Helper</app> is a GUI for the command line application Jekyll.</p>
 
 <!-- This is the visible index -->
 <section id="contents" style="2column">
 <!-- other pages needs to have a link to index#contents for this to work -->
 <title>Contents</title>
 </section>
-
-<note>
-  <!-- delete this note -->
-  <p>
-    Your script or application looks better if it has help files similar to other applications in ubuntu.
-  </p>
-  <p>
-    Some people think that help files are only for apps that are difficult to use.
-  </p>
-</note>
 
 </page>

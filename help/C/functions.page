@@ -1,0 +1,34 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="functions">
+
+<info>
+  <link type="guide" xref="index#contents"/>
+  <credit type="author">
+    <name>Christopher Wells</name>
+    <email>cwellsny@nycap.rr.com</email>
+    <years>2015</years>
+  </credit>
+  <desc>Information on the various functions Jekyll Helper has.</desc>
+</info>
+
+<title>Functions</title>
+<p><app>Jekyll Helper</app> uses several functions that are controlled through the GUI buttons and switches. These functions run Jekyll commands in order to produce the desired effect. The commands the these functions run can be configured through the program's preference settings.</p>
+
+<p></p>
+<terms>
+  <title>Program Functions</title>
+  <item>
+    <title><code>Serve</code></title>
+    <p>Serves the selected website when the "Serve" switch is turned on.</p>
+  </item>
+  <item>
+    <title><code>Build</code></title>
+    <p>Builds the selected website when the build button is clicked.</p>
+  </item>
+  <item>
+    <title><code>Push</code></title>
+    <p>Runs the command that the user sets as the push command.</p>
+  </item>
+</terms>
+</page>

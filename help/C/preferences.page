@@ -5,14 +5,31 @@
 <info>
   <link type="guide" xref="index#contents"/>
   <credit type="author">
-    <name>Your Name</name>
-    <email>Your E-mail</email>
-    <years>2010</years>
+    <name>Christopher Wells</name>
+    <email>cwellsny@nycap.rr.com</email>
+    <years>2015</years>
   </credit>
-  <desc>Optional short description of Preferences for contents page</desc>
+  <desc>Information on the various preference settings for Jekyll Helper.</desc>
 </info>
 
 <title>Preferences</title>
-<p>This is the preferences page.</p>
+<p><app>Jekyll Helper</app> includes several preferences settings that allow the user to configure how the various functions for the program work.</p>
+
+<p>The following are settings that allow the user to set what terminal command is run when the corresponding function is run through the program.</p>
+
+<table>
+    <tr>
+        <td><p>Serve command</p></td>
+        <td><p>Sets the command that is run when the serve switch is activated. Defaults to <cmd>jekyll serve</cmd>.</p></td>
+    </tr>
+    <tr>
+        <td><p>Build command</p></td>
+        <td><p>Sets the command that is run when the build button is clicked. Defaults to <cmd>jekyll build</cmd>.</p></td>
+    </tr>
+    <tr>
+        <td><p>Push command</p></td>
+        <td><p>Sets the command that is run when the push button is clicked. Does not have a default value.</p></td>
+    </tr>
+</table>
 
 </page>
