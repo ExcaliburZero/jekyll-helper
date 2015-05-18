@@ -7,10 +7,10 @@
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions:
-# 
+#
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
-# 
+#
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -103,9 +103,8 @@ class JekyllHelperWindow(Window):
 
     global jekyll_serve
 
-    def jekyll_serve_on(self):
+    def jekyll_serve_on(self, site_directory):
         """Begin serving website through Jekyll."""
-        global site_directory
         print("Jekyll Serve On: " + site_directory)
 
         # Get serve command from settings
@@ -121,11 +120,11 @@ class JekyllHelperWindow(Window):
         is_serving = True
         return;
 
-    def jekyll_serve_off(self):
+    def jekyll_serve_off(self, site_directory):
         """End serving website through Jekyll."""
         global jekyll_serve
-        global site_directory
         print("Jekyll Serve Off: " + site_directory)
+        # End the serve command
         os.killpg(jekyll_serve.pid, signal.SIGTERM)
         global is_serving
         is_serving = False
@@ -134,21 +133,19 @@ class JekyllHelperWindow(Window):
     def on_serveSwitch_stateset(self, widget, state):
         """Begin or end serving website through Jekyll based on the serveSwitch value."""
         print("Serve: " + str(state))
+        global site_directory
         if (state == True):
-            self.jekyll_serve_on();
+            self.jekyll_serve_on(site_directory);
         elif (state == False):
-            self.jekyll_serve_off();
+            self.jekyll_serve_off(site_directory);
         else:
             print("Error triggering Jekyll Serve")
         print("Is Serving: " + str(is_serving))
         return;
 
-    # Jekyll build function
-    def on_buildButton_clicked(self, widget):
-        """Build the website when the build button is clicked."""
-        global site_directory
-        print("Jekyll Build: " + site_directory)
-
+    # Jekyll build functions
+    def jekyll_build(self, site_directory):
+        """Builds the website through Jekyll."""
         # Get build command from settings
         global settings
         print("Jekyll Build Command: " + settings.get_string("build-command"))
@@ -158,15 +155,19 @@ class JekyllHelperWindow(Window):
         # Build website
         global jekyll_build
         jekyll_build = Popen(args, cwd=site_directory, shell=True, stdin=PIPE, stdout=PIPE, preexec_fn=os.setsid).wait()
+        return;
+
+    def on_buildButton_clicked(self, widget):
+        """Build the website when the build button is clicked."""
+        global site_directory
+        print("Jekyll Build: " + site_directory)
+        self.jekyll_build(site_directory)
         print("Sucessfully built website")
         return;
 
-    # Push website function
-    def on_pushButton_clicked(self, widget):
-        """Push the website when the push button is clicked."""
-        global site_directory
-        print("Push: " + site_directory)
-
+    # Push website functions
+    def website_push(self, site_directory):
+        """Push the website using the user set push command."""
         # Get push command from settings
         global settings
         print("Push Command: " + settings.get_string("push-command"))
@@ -176,5 +177,12 @@ class JekyllHelperWindow(Window):
         # Push website
         global jekyll_push
         jekyll_push = Popen(args, cwd=site_directory, shell=True, stdin=PIPE, stdout=PIPE, preexec_fn=os.setsid).wait()
+        return;
+
+    def on_pushButton_clicked(self, widget):
+        """Push the website when the push button is clicked."""
+        global site_directory
+        print("Push: " + site_directory)
+        self.website_push(site_directory)
         print("Sucessfully pushed website")
         return;
