@@ -85,6 +85,19 @@ class JekyllHelperWindow(Window):
     global settings
     settings = Gio.Settings("net.launchpad.jekyll-helper")
 
+    # Function to check if the set site directory exists
+    def site_directory_exists(self, site_directory):
+        """Check if the site directory that the user has chosen or not yet chosen exists."""
+        # If no site directory has been entered
+        if ( site_directory == "" ):
+            return 1;
+        # If the chosen site directory does not exist
+        elif ( os.path.exists(site_directory) == False ):
+            return 2;
+        # If the chosen site directory does exist
+        else:
+            return 0;
+
     # Set directory that stores the Jekyll website
     global site_directory
     site_directory = ""
@@ -95,6 +108,11 @@ class JekyllHelperWindow(Window):
         global site_directory
         site_directory = self.directoryChooser.get_current_folder()
         print(site_directory)
+        # Check if the selected directory exists
+        if (self.site_directory_exists(site_directory) == 1):
+            print("No site directory has been entered.")
+        elif (self.site_directory_exists(site_directory) == 2):
+            print("The entered directory does not exist.")
         return;
 
     # Jekyll serve functions
@@ -134,13 +152,20 @@ class JekyllHelperWindow(Window):
         """Begin or end serving website through Jekyll based on the serveSwitch value."""
         print("Serve: " + str(state))
         global site_directory
-        if (state == True):
-            self.jekyll_serve_on(site_directory);
-        elif (state == False):
-            self.jekyll_serve_off(site_directory);
-        else:
-            print("Error triggering Jekyll Serve")
-        print("Is Serving: " + str(is_serving))
+        
+        # Run the serve fuction if the site directory exists
+        if (self.site_directory_exists(site_directory) == 0):
+            if (state == True):
+                self.jekyll_serve_on(site_directory);
+            elif (state == False):
+                self.jekyll_serve_off(site_directory);
+            else:
+                print("Error triggering Jekyll Serve")
+            print("Is Serving: " + str(is_serving))
+        elif (self.site_directory_exists(site_directory) == 1):
+            print("No site directory has been entered.")
+        elif (self.site_directory_exists(site_directory) == 2):
+            print("The entered directory does not exist.")
         return;
 
     # Jekyll build functions
@@ -161,8 +186,15 @@ class JekyllHelperWindow(Window):
         """Build the website when the build button is clicked."""
         global site_directory
         print("Jekyll Build: " + site_directory)
-        self.jekyll_build(site_directory)
-        print("Sucessfully built website")
+        
+        # Run the build fuction if the site directory exists
+        if (self.site_directory_exists(site_directory) == 0):
+            self.jekyll_build(site_directory)
+            print("Sucessfully built website")
+        elif (self.site_directory_exists(site_directory) == 1):
+            print("No site directory has been entered.")
+        elif (self.site_directory_exists(site_directory) == 2):
+            print("The entered directory does not exist.")
         return;
 
     # Push website functions
@@ -183,6 +215,13 @@ class JekyllHelperWindow(Window):
         """Push the website when the push button is clicked."""
         global site_directory
         print("Push: " + site_directory)
-        self.website_push(site_directory)
-        print("Sucessfully pushed website")
+        
+        # Run the push fuction if the site directory exists
+        if (self.site_directory_exists(site_directory) == 0):
+            self.website_push(site_directory)
+            print("Sucessfully pushed website")
+        elif (self.site_directory_exists(site_directory) == 1):
+            print("No site directory has been entered.")
+        elif (self.site_directory_exists(site_directory) == 2):
+            print("The entered directory does not exist.")
         return;

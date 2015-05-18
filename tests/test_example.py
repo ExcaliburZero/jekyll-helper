@@ -8,10 +8,10 @@
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions:
-# 
+#
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
-# 
+#
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -27,6 +27,7 @@ import unittest
 sys.path.insert(0, os.path.realpath(os.path.join(os.path.dirname(__file__), "..")))
 
 from jekyll_helper import AboutJekyllHelperDialog
+from jekyll_helper import JekyllHelperWindow
 
 class TestExample(unittest.TestCase):
     def setUp(self):
@@ -39,6 +40,17 @@ class TestExample(unittest.TestCase):
         public_members.extend(['gettext'])
         public_members.sort()
         self.assertEqual(self.AboutJekyllHelperDialog_members, public_members)
+
+# Test the site directory check function
+class TestCheckSiteDirectory(unittest.TestCase):
+    """Tests the site directory checking function to make sure that it works properly."""
+    def setUp(self):
+        self.prog_window = JekyllHelperWindow.JekyllHelperWindow()
+
+    def test_site_directory_exists(self):
+        self.assertEqual(self.prog_window.site_directory_exists(os.getcwd()), 0)    # Check current directory
+        self.assertEqual(self.prog_window.site_directory_exists(""), 1) # Check a blank directory
+        self.assertEqual(self.prog_window.site_directory_exists(os.getcwd() + "htrjek"), 2) # Check a nonexistant directory
 
 if __name__ == '__main__':
     unittest.main()
