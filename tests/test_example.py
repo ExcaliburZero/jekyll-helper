@@ -41,16 +41,28 @@ class TestExample(unittest.TestCase):
         public_members.sort()
         self.assertEqual(self.AboutJekyllHelperDialog_members, public_members)
 
-# Test the site directory check function
-class TestCheckSiteDirectory(unittest.TestCase):
-    """Tests the site directory checking function to make sure that it works properly."""
+# Test most of the main functions in JekyllHelperWindow
+class TestJekyllHelperWindow(unittest.TestCase):
+    """Runs various tests on the main functions in JekyllHelperWindow."""
     def setUp(self):
         self.prog_window = JekyllHelperWindow.JekyllHelperWindow()
 
+    # Test the site directory check function
     def test_site_directory_exists(self):
+        """Tests the site directory checking function to make sure that it works properly."""
         self.assertEqual(self.prog_window.site_directory_exists(os.getcwd()), 0)    # Check current directory
         self.assertEqual(self.prog_window.site_directory_exists(""), 1) # Check a blank directory
         self.assertEqual(self.prog_window.site_directory_exists(os.getcwd() + "htrjek"), 2) # Check a nonexistant directory
+
+    # Test the set website directory function
+    def test_set_website_directory(self):
+        """Tests the site directory setting function to see if it can be run through."""
+        result = self.prog_window.set_website_directory(self.prog_window)
+        if (result == 2):
+            self.assertEqual(result, 2)
+        else:
+            self.assertEqual(result, 0)
+
 
 if __name__ == '__main__':
     unittest.main()

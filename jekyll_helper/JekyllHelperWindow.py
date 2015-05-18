@@ -92,7 +92,7 @@ class JekyllHelperWindow(Window):
         if ( site_directory == "" ):
             return 1;
         # If the chosen site directory does not exist
-        elif ( os.path.exists(site_directory) == False ):
+        elif ( os.path.exists(site_directory or "") == False ):
             return 2;
         # If the chosen site directory does exist
         else:
@@ -111,9 +111,12 @@ class JekyllHelperWindow(Window):
         # Check if the selected directory exists
         if (self.site_directory_exists(site_directory) == 1):
             print("No site directory has been entered.")
+            return 1;
         elif (self.site_directory_exists(site_directory) == 2):
             print("The entered directory does not exist.")
-        return;
+            return 2;
+        else:
+            return 0;
 
     # Jekyll serve functions
     global is_serving
@@ -152,7 +155,7 @@ class JekyllHelperWindow(Window):
         """Begin or end serving website through Jekyll based on the serveSwitch value."""
         print("Serve: " + str(state))
         global site_directory
-        
+
         # Run the serve fuction if the site directory exists
         if (self.site_directory_exists(site_directory) == 0):
             if (state == True):
@@ -186,7 +189,7 @@ class JekyllHelperWindow(Window):
         """Build the website when the build button is clicked."""
         global site_directory
         print("Jekyll Build: " + site_directory)
-        
+
         # Run the build fuction if the site directory exists
         if (self.site_directory_exists(site_directory) == 0):
             self.jekyll_build(site_directory)
@@ -215,7 +218,7 @@ class JekyllHelperWindow(Window):
         """Push the website when the push button is clicked."""
         global site_directory
         print("Push: " + site_directory)
-        
+
         # Run the push fuction if the site directory exists
         if (self.site_directory_exists(site_directory) == 0):
             self.website_push(site_directory)
