@@ -28,6 +28,7 @@ sys.path.insert(0, os.path.realpath(os.path.join(os.path.dirname(__file__), ".."
 
 from jekyll_helper import AboutJekyllHelperDialog
 from jekyll_helper import JekyllHelperWindow
+from jekyll_helper import __init__
 
 class TestExample(unittest.TestCase):
     def setUp(self):
@@ -63,6 +64,12 @@ class TestJekyllHelperWindow(unittest.TestCase):
         else:
             self.assertEqual(result, 0)
 
+# Test the functions of the init file
+class TestInit(unittest.TestCase):
+    """Runs various tests on the functions in __init__."""
+    def test_main(self):
+        """Test runnin the main function in the init file."""
+        __init__.main()
 
 if __name__ == '__main__':
     unittest.main()
