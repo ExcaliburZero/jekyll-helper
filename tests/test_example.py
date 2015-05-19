@@ -68,8 +68,8 @@ class TestJekyllHelperWindow(unittest.TestCase):
 class TestInit(unittest.TestCase):
     """Runs various tests on the functions in __init__."""
     def test_main(self):
-        """Test runnin the main function in the init file."""
-        __init__.main()
+        """Test running the main function in the init file."""
+        main()
 
 if __name__ == '__main__':
     unittest.main()
