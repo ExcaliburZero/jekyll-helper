@@ -62,7 +62,12 @@ class TestJekyllHelperWindow(unittest.TestCase):
             self.assertEqual(result, 2)
         else:
             self.assertEqual(result, 0)
-
+            
+    # Test Jekyll serve button and functions
+    def test_on_serveSwitch_stateset(self):
+        """Tests the serve button and functions to make sure that they can be run."""
+        self.prog_window.on_serveSwitch_stateset(self.prog_window, self.prog_window.serveSwitch, True)
+        self.prog_window.on_serveSwitch_stateset(self.prog_window, self.prog_window.serveSwitch, False)
 
 if __name__ == '__main__':
     unittest.main()
