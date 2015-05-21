@@ -24,6 +24,7 @@
 import sys
 import os.path
 import unittest
+import subprocess
 sys.path.insert(0, os.path.realpath(os.path.join(os.path.dirname(__file__), "..")))
 
 from jekyll_helper import AboutJekyllHelperDialog
