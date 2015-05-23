@@ -1,6 +1,15 @@
-jekyll-helper (0.2) vivid; urgency=medium
+jekyll-helper (0.2.1) vivid; urgency=medium
 
   * New release.
+
+ -- Christopher Wells <cwellsny@nycap.rr.com>  Sat, 23 May 2015 11:24:40 -0400
+
+jekyll-helper (0.2) vivid; urgency=medium
+
+  [ Christopher Wells ]
+  * New release.
+
+  [ Chris Wells ]
 
  -- Christopher Wells <cwellsny@nycap.rr.com>  Sat, 16 May 2015 10:20:22 -0400
 
