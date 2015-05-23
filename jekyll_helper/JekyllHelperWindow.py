@@ -231,3 +231,13 @@ class JekyllHelperWindow(Window):
         elif (self.site_directory_exists(self.site_directory) == 2):
             print("The entered directory does not exist.")
         return
+
+    # End program and cleanup excess variables
+    def on_destroy(self, widget, data=None):
+        """Cleanup and remove unwanted variables when the program is closed."""
+        # Destroy all running terminals
+        if (self.is_serving == True): # Kill serve terminal if it is still running
+            os.killpg(self.jekyll_serve.pid, signal.SIGTERM)
+            self.is_serving = False
+
+        Gtk.main_quit()
