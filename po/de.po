@@ -1,0 +1,87 @@
+# German translation for jekyll-helper
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the jekyll-helper package.
+# Christopher Wells <cwellsny@nycap.rr.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: jekyll-helper\n"
+"Report-Msgid-Bugs-To: Christopher Wells <cwellsny@nycap.rr.com>\n"
+"POT-Creation-Date: 2015-05-23 11:23-0400\n"
+"PO-Revision-Date: 2015-05-23 17:25+0000\n"
+"Last-Translator: Christopher Wells <cwellsny@nycap.rr.com>\n"
+"Language-Team: German <de@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-05-23 17:32+0000\n"
+"X-Generator: Launchpad (build 17514)\n"
+
+#: ../jekyll-helper.desktop.in.h:1 ../data/ui/JekyllHelperWindow.ui.h:1
+msgid "Jekyll Helper"
+msgstr "Jekyll Helfer"
+
+#: ../jekyll-helper.desktop.in.h:2
+msgid "A program that serves as a basic GUI for Jekyll"
+msgstr "Ein Programm, das eine einfache graphische Benutzeroberfläche für Jekyll ist"
+
+#: ../data/ui/JekyllHelperWindow.ui.h:2
+msgid "_File"
+msgstr "_Datei"
+
+#: ../data/ui/JekyllHelperWindow.ui.h:3
+msgid "_Edit"
+msgstr "_Bearbeiten"
+
+#: ../data/ui/JekyllHelperWindow.ui.h:4
+msgid "_Help"
+msgstr "_Hilfe"
+
+#: ../data/ui/JekyllHelperWindow.ui.h:5
+msgid "Contents"
+msgstr "Inhalte"
+
+#: ../data/ui/JekyllHelperWindow.ui.h:6
+msgid "Jekyll Version: "
+msgstr "Jekyll Version: "
+
+#: ../data/ui/JekyllHelperWindow.ui.h:7
+msgid "Serve"
+msgstr "Dienen"
+
+#: ../data/ui/JekyllHelperWindow.ui.h:8
+msgid "Build"
+msgstr "Bauen"
+
+#: ../data/ui/JekyllHelperWindow.ui.h:9
+msgid "Push"
+msgstr "Schieben"
+
+#: ../data/ui/JekyllHelperWindow.ui.h:10
+msgid "Status Area"
+msgstr "Statusbereich"
+
+#. Code for other initialization actions should be added here.
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:1
+msgid "Jekyll Helper Preferences"
+msgstr "Jekyll Helfer Vorlieben"
+
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:2
+msgid "_Serve command:"
+msgstr "_Dienenbefehl:"
+
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:3
+msgid "_Build command:"
+msgstr "_Bauenbefehl:"
+
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:4
+msgid "_Push command:"
+msgstr "_Schiebenbefehl:"
+
+#: ../data/ui/AboutJekyllHelperDialog.ui.h:1
+msgid "Copyright (C) 2015 <Christopher Wells> <cwellsny@nycap.rr.com>"
+msgstr "Copyright (C) 2015 <Christopher Wells> <cwellsny@nycap.rr.com>"
+
+#: ../jekyll_helper/__init__.py:38
+msgid "Show debug messages (-vv debugs jekyll_helper_lib also)"
+msgstr "Zeigt Fehlermeldungen (-vv Fehler suchen jekyll_helper_lib auch)"
