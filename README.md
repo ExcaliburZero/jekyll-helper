@@ -9,5 +9,13 @@ This is a program that serves as a basic GUI for Jekyll.
 ## Website
 - https://excaliburzero.github.io/jekyll-helper/
 
+## Launchpad entry
+This program has a Launchpad entry located at the following url:
+
+- https://launchpad.net/jekyll-helper
+
+## Translations
+This program uses Gettext for its translations and handles the creation of its translation files through the [translations section of its Launchpad entry](https://translations.launchpad.net/jekyll-helper). The translation files are then downloaded and added into the GitHub hosting of the program.
+
 ## Licensing
 This program is licensed under The MIT License. See the LICENSE file for more information.
