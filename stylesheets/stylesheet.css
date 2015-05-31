@@ -74,6 +74,15 @@ header h2 {
   margin: 0;
 }
 
+h1 a {
+    color: #b5e853;
+    text-decoration: none;
+}
+
+h1 a:hover {
+    text-decoration: underline;
+}
+
 /* Main Content
 */
 
