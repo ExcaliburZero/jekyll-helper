@@ -7,10 +7,10 @@
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions:
-# 
+#
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
-# 
+#
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -33,7 +33,7 @@ from . helpers import get_builder, show_uri, get_help_uri
 class Window(Gtk.Window):
     __gtype_name__ = "Window"
 
-    # To construct a new instance of this method, the following notable 
+    # To construct a new instance of this method, the following notable
     # methods are called in this order:
     # __new__(cls)
     # __init__(self)
@@ -42,11 +42,11 @@ class Window(Gtk.Window):
     #
     # For this reason, it's recommended you leave __init__ empty and put
     # your initialization code in finish_initializing
-    
+
     def __new__(cls):
-        """Special static method that's automatically called by Python when 
+        """Special static method that's automatically called by Python when
         constructing a new instance of this class.
-        
+
         Returns a fully instantiated BaseJekyllHelperWindow object.
         """
         builder = get_builder('JekyllHelperWindow')
@@ -85,7 +85,7 @@ class Window(Gtk.Window):
             pass
 
     def on_mnu_contents_activate(self, widget, data=None):
-        show_uri(self, "ghelp:%s" % get_help_uri())
+        show_uri(self, "help:%s" % get_help_uri())
 
     def on_mnu_about_activate(self, widget, data=None):
         """Display the about box for jekyll-helper."""
@@ -126,10 +126,9 @@ class Window(Gtk.Window):
 
     def on_preferences_dialog_destroyed(self, widget, data=None):
         '''only affects gui
-        
+
         logically there is no difference between the user closing,
         minimising or ignoring the preferences dialog'''
         logger.debug('on_preferences_dialog_destroyed')
         # to determine whether to create or present preferences_dialog
         self.preferences_dialog = None
-

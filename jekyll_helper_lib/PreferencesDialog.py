@@ -7,10 +7,10 @@
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions:
-# 
+#
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
-# 
+#
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -35,9 +35,9 @@ class PreferencesDialog(Gtk.Dialog):
     __gtype_name__ = "PreferencesDialog"
 
     def __new__(cls):
-        """Special static method that's automatically called by Python when 
+        """Special static method that's automatically called by Python when
         constructing a new instance of this class.
-        
+
         Returns a fully instantiated PreferencesDialog object.
         """
         builder = get_builder('PreferencesJekyllHelperDialog')
@@ -52,7 +52,7 @@ class PreferencesDialog(Gtk.Dialog):
         and creating a PreferencesDialog object with it in order to
         finish initializing the start of the new PerferencesJekyllHelperDialog
         instance.
-        
+
         Put your initialization code in here and leave __init__ undefined.
         """
 
@@ -66,5 +66,4 @@ class PreferencesDialog(Gtk.Dialog):
         self.destroy()
 
     def on_btn_help_clicked(self, widget, data=None):
-        show_uri(self, "ghelp:%s" % get_help_uri('preferences'))
-
+        show_uri(self, "help:%s" % get_help_uri('preferences'))
