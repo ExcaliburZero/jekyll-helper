@@ -2,7 +2,7 @@
   <!-- interface-requires about_jekyll_helper_dialog 1.0 -->
   <!-- interface-requires gtk+ 3.0 -->
   <object class="AboutJekyllHelperDialog" id="about_jekyll_helper_dialog">
-    <property name="version">0.2.1</property><property name="copyright" translatable="yes">Copyright (C) 2015 &lt;Christopher Wells&gt; &lt;cwellsny@nycap.rr.com&gt;</property><property name="website">https://launchpad.net/jekyll-helper</property><property name="can_focus">False</property>
+    <property name="version">0.2.2</property><property name="copyright" translatable="yes">Copyright (C) 2015 &lt;Christopher Wells&gt; &lt;cwellsny@nycap.rr.com&gt;</property><property name="website">https://launchpad.net/jekyll-helper</property><property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="icon">../media/jekyll-helper.svg</property>
     <property name="type_hint">normal</property>

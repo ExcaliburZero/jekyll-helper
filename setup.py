@@ -142,7 +142,7 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
 
 DistUtilsExtra.auto.setup(
     name='jekyll-helper',
-    version='0.2.1',
+    version='0.2.2',
     license='MIT',
     author='Christopher Wells',
     author_email='cwellsny@nycap.rr.com',
