@@ -1,0 +1,13 @@
+{
+    "description": "A program that serves as a basic GUI for Jekyll",
+    "hooks": {
+        "jekyll-helper": {
+            "apparmor": "jekyll-helper.json",
+            "desktop": "jekyll-helper.desktop"
+        }
+    },
+    "maintainer": "Christopher Wells <cwellsny@nycap.rr.com>",
+    "name": "com.ubuntu.developer.excaliburzero.jekyll-helper",
+    "title": "Jekyll Helper",
+    "version": "0.2.2"
+}
