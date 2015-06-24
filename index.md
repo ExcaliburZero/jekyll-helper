@@ -7,10 +7,10 @@ tagline: A GUI for Jekyll
 
 **Jekyll Helper** is a program that serves as a basic GUI for [Jekyll](http://jekyllrb.com/). It allows users to more easily test and build their websites by offering a GUI interface for serveral of Jekyll's main functions.
 
-![A screenshot of Jekyll Helper]({{ site.baseurl }}/assets/images/screenshots/screenshot_01.png)
+![A screenshot of Jekyll Helper]({{ BASE_PATH }}/assets/images/screenshots/screenshot_01.png)
 
 ## Screenshots
-To see more screenshots of Jekyll Helper, please see the [screenshots page]({{ site.baseurl }}/screenshots.html).
+To see more screenshots of Jekyll Helper, please see the [screenshots page]({{ BASE_PATH }}/screenshots.html).
 
 ## Download
 Jekyll Helper primarily supports Linux, however it may be able to run on other operating systems.
