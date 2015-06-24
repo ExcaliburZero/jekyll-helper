@@ -66,6 +66,8 @@ class Window(Gtk.Window):
         self.ui = builder.get_ui(self, True)
         self.PreferencesDialog = None # class
         self.preferences_dialog = None # instance
+        self.NewDialog = None # class
+        self.new_dialog = None # instance
         self.AboutDialog = None # class
 
         self.settings = Gio.Settings("net.launchpad.jekyll-helper")
@@ -112,6 +114,24 @@ class Window(Gtk.Window):
             self.preferences_dialog.show()
         # destroy command moved into dialog to allow for a help button
 
+    def on_mnu_new_activate(self, widget, data=None):
+        """Display the new window for jekyll-helper."""
+
+        """ From the PyGTK Reference manual
+           Say for example the new dialog is currently open,
+           and the user chooses New from the menu a second time;
+           use the present() method to move the already-open dialog
+           where the user can see it."""
+        if self.new_dialog is not None:
+            logger.debug('show existing new_dialog')
+            self.new_dialog.present()
+        elif self.NewDialog is not None:
+            logger.debug('create new new_dialog')
+            self.new_dialog = self.NewDialog() # pylint: disable=E1102
+            self.new_dialog.connect('destroy', self.on_new_dialog_destroyed)
+            self.new_dialog.show()
+        # destroy command moved into dialog to allow for a help button
+
     def on_mnu_close_activate(self, widget, data=None):
         """Signal handler for closing the JekyllHelperWindow."""
         self.destroy()
@@ -132,3 +152,12 @@ class Window(Gtk.Window):
         logger.debug('on_preferences_dialog_destroyed')
         # to determine whether to create or present preferences_dialog
         self.preferences_dialog = None
+
+    def on_new_dialog_destroyed(self, widget, data=None):
+        '''only affects gui
+
+        logically there is no difference between the user closing,
+        minimising or ignoring the new dialog'''
+        logger.debug('on_new_dialog_destroyed')
+        # to determine whether to create or present new_dialog
+        self.new_dialog = None

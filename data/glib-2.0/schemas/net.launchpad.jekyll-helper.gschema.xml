@@ -16,5 +16,15 @@
       <summary>Push button command</summary>
       <description>The command that is run when the push button is clicked on.</description>
     </key>
+    <key name="new-command1" type="s">
+      <default>'jekyll new'</default>
+      <summary>New button command beginning</summary>
+      <description>The beginning of the command that is run when a new website is created.</description>
+    </key>
+    <key name="new-command2" type="s">
+      <default>''</default>
+      <summary>New button command ending</summary>
+      <description>The ending of the command that is run when a new website is created.</description>
+    </key>
   </schema>
 </schemalist>

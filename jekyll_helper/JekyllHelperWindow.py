@@ -36,6 +36,7 @@ logger = logging.getLogger('jekyll_helper')
 from jekyll_helper_lib import Window
 from jekyll_helper.AboutJekyllHelperDialog import AboutJekyllHelperDialog
 from jekyll_helper.PreferencesJekyllHelperDialog import PreferencesJekyllHelperDialog
+from jekyll_helper.NewJekyllHelperDialog import NewJekyllHelperDialog
 
 # See jekyll_helper_lib.Window.py for more details about how this class works
 class JekyllHelperWindow(Window):
@@ -47,6 +48,7 @@ class JekyllHelperWindow(Window):
         # Windows
         #self.AboutDialog = None # The window that contains information on the program
         #self.PreferencesDialog = None # The window that contains the preference settings
+        #self.NewDialog = None # The window that allows the creation of a new website
 
         # GUI elements
         #self.jekyllVersionLabel  # The label that gives the Jekyll version number
@@ -71,6 +73,7 @@ class JekyllHelperWindow(Window):
 
         self.AboutDialog = AboutJekyllHelperDialog
         self.PreferencesDialog = PreferencesJekyllHelperDialog
+        self.NewDialog = NewJekyllHelperDialog
 
         # Code for other initialization actions should be added here.
 

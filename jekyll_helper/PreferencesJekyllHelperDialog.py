@@ -7,10 +7,10 @@
 # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 # copies of the Software, and to permit persons to whom the Software is
 # furnished to do so, subject to the following conditions:
-# 
+#
 # The above copyright notice and this permission notice shall be included in
 # all copies or substantial portions of the Software.
-# 
+#
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -53,5 +53,10 @@ class PreferencesJekyllHelperDialog(PreferencesDialog):
         # Push command
         widget = self.builder.get_object('push_command_entry')
         settings.bind("push-command", widget, "text", Gio.SettingsBindFlags.DEFAULT)
+        # New command
+        widget = self.builder.get_object('new_command_entry1')
+        settings.bind("new-command1", widget, "text", Gio.SettingsBindFlags.DEFAULT)
+        widget = self.builder.get_object('new_command_entry2')
+        settings.bind("new-command2", widget, "text", Gio.SettingsBindFlags.DEFAULT)
 
         # Code for other initialization actions should be added here.
