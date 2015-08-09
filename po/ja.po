@@ -1,0 +1,87 @@
+# Japanese translation for jekyll-helper
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the jekyll-helper package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: jekyll-helper\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-05-23 11:23-0400\n"
+"PO-Revision-Date: 2015-08-09 07:33+0000\n"
+"Last-Translator: Rui <mrrst0914@gmail.com>\n"
+"Language-Team: Japanese <ja@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-08-09 07:36+0000\n"
+"X-Generator: Launchpad (build 17656)\n"
+
+#: ../jekyll-helper.desktop.in.h:1 ../data/ui/JekyllHelperWindow.ui.h:1
+msgid "Jekyll Helper"
+msgstr "Jekyll ヘルパー"
+
+#: ../jekyll-helper.desktop.in.h:2
+msgid "A program that serves as a basic GUI for Jekyll"
+msgstr "Jekyll用の基本的なGUIプログラム"
+
+#: ../data/ui/JekyllHelperWindow.ui.h:2
+msgid "_File"
+msgstr "ファイル(_F)"
+
+#: ../data/ui/JekyllHelperWindow.ui.h:3
+msgid "_Edit"
+msgstr "編集(_E)"
+
+#: ../data/ui/JekyllHelperWindow.ui.h:4
+msgid "_Help"
+msgstr "ヘルプ(_H)"
+
+#: ../data/ui/JekyllHelperWindow.ui.h:5
+msgid "Contents"
+msgstr "コンテンツ"
+
+#: ../data/ui/JekyllHelperWindow.ui.h:6
+msgid "Jekyll Version: "
+msgstr "Jekyllのバージョン: "
+
+#: ../data/ui/JekyllHelperWindow.ui.h:7
+msgid "Serve"
+msgstr "サーブ"
+
+#: ../data/ui/JekyllHelperWindow.ui.h:8
+msgid "Build"
+msgstr "ビルド"
+
+#: ../data/ui/JekyllHelperWindow.ui.h:9
+msgid "Push"
+msgstr "適用"
+
+#: ../data/ui/JekyllHelperWindow.ui.h:10
+msgid "Status Area"
+msgstr "ステータス領域"
+
+#. Code for other initialization actions should be added here.
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:1
+msgid "Jekyll Helper Preferences"
+msgstr "Jekyllヘルパー設定"
+
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:2
+msgid "_Serve command:"
+msgstr "コマンド実行(_S):"
+
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:3
+msgid "_Build command:"
+msgstr "ビルドコマンド(_B):"
+
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:4
+msgid "_Push command:"
+msgstr "適用コマンド(_P):"
+
+#: ../data/ui/AboutJekyllHelperDialog.ui.h:1
+msgid "Copyright (C) 2015 <Christopher Wells> <cwellsny@nycap.rr.com>"
+msgstr "Copyright (C) 2015 <Christopher Wells> <cwellsny@nycap.rr.com>"
+
+#: ../jekyll_helper/__init__.py:38
+msgid "Show debug messages (-vv debugs jekyll_helper_lib also)"
+msgstr "デバッグメッセージを表示 (-vv debugs jekyll_helper_lib also)"
