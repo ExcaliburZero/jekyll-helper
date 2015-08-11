@@ -9,6 +9,9 @@ This is a program that serves as a basic GUI for Jekyll.
 ## Website
 - https://excaliburzero.github.io/jekyll-helper/
 
+## Licensing
+This program is licensed under The MIT License. See the LICENSE file for more information.
+
 ## Launchpad entry
 This program has a Launchpad entry located at the following url:
 
@@ -38,12 +41,41 @@ This program can also be installed on Debian-based Linux distros through the `.d
 #### Compile from source
 This program can be compiled from it source code. It is generally packaged via Quickly, however it should be able to be compiled through other methods.
 
-If you are able to sucessfully compile this program from it source, please add the method you used to here via a pull request.
+If you are able to successfully compile this program from it source, please add the method you used to here via a pull request.
 
 ### Other
 If you are not using Linux, then you should be able to compile Jekyll Helper from its source code.
 
-If you are able to sucessfully compile this program from it source, please add the method you used to here via a pull request.
+If you are able to successfully compile this program from it source, please add the method you used to here via a pull request.
 
-## Licensing
-This program is licensed under The MIT License. See the LICENSE file for more information.
+## Development
+The following is information regarding the development process for Jekyll Helper.
+
+### Running from source
+Jekyll Helper can be run via it's source code using Cannonical's Quickly program. In order to do so, you must first enter the jekyll-helper directory in the terminal and run the `quickly run` command.
+
+### Editing help pages
+The help pages for Jekyll Helper are located in the `/help/C/ directory`. They use the [Mallard](http://projectmallard.org/1.0/) markup language.
+
+In order to be able to read the help pages when running Jekyll Helper from source, you first need to temporarily change the following line in `/jekyll_helper_lib/Window.py`
+
+```
+show_uri(self, "help:%s" % get_help_uri())
+```
+
+To the following:
+
+```
+show_uri(self, "ghelp:%s" % get_help_uri())
+```
+
+This is due to some issue with the installed version of Jekyll Helper requiring the use of "help", while when running Jekyll Helper from source, "ghelp" is required.
+
+### Updating program version
+To change the version number of Jekyll Helper a few things need to be updated.
+
+- Manual page - Needs to have the version number updated as well as the last update date. `/doc/jekyll-helper.1`
+- About window - Needs to have the version number updated. `/data/ui/AboutJekyllHelperDialog.ui`
+- Config library file - Needs to have the version number updated. `/jekyll_helper_lib/jekyll_helperconfig.py`
+- Setup file - Needs to have the version number updated. `/setup.py`
+- Debian changelog - Needs to have an entry added for the version update. `/debian/changelog`
