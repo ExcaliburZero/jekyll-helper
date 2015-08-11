@@ -28,6 +28,7 @@ sys.path.insert(0, os.path.realpath(os.path.join(os.path.dirname(__file__), ".."
 
 from jekyll_helper import AboutJekyllHelperDialog
 from jekyll_helper import JekyllHelperWindow
+from jekyll_helper import NewJekyllHelperDialog
 
 class TestExample(unittest.TestCase):
     def setUp(self):
@@ -63,6 +64,18 @@ class TestJekyllHelperWindow(unittest.TestCase):
         else:
             self.assertEqual(result, 0)
 
+# Test most of the main functions in NewJekyllHelperDialog
+class NewJekyllHelperDialog(unittest.TestCase):
+    """Runs various tests on the main functions in NewJekyllHelperDialog."""
+    def setUp(self):
+        self.prog_window = NewJekyllHelperDialog.NewJekyllHelperDialog()
+
+    # Test the site directory check function
+    def test_site_directory_exists(self):
+        """Tests the site directory checking function to make sure that it works properly."""
+        self.assertEqual(self.prog_window.site_directory_exists(os.getcwd()), 0)    # Check current directory
+        self.assertEqual(self.prog_window.site_directory_exists(""), 1) # Check a blank directory
+        self.assertEqual(self.prog_window.site_directory_exists(os.getcwd() + "htrjek"), 2) # Check a nonexistant directory
 
 if __name__ == '__main__':
     unittest.main()
