@@ -1,0 +1,27 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="new">
+
+<info>
+  <link type="guide" xref="index#contents"/>
+  <credit type="author">
+    <name>Christopher Wells</name>
+    <email>cwellsny@nycap.rr.com</email>
+    <years>2015</years>
+  </credit>
+  <desc>Information on how to create a new Jekyll website using Jekyll Helper.</desc>
+</info>
+
+<title>Creating a new website</title>
+<p><app>Jekyll Helper</app> can be used to create new Jekyll websites. By default it uses the general <cmd>jekyll new</cmd> command to create the websites, but this can be changed in the <link xref="preferences" /> window.</p>
+
+<p>A new Jekyll website can be created via the following process:</p>
+
+<list type="numbered">
+  <item><p>Select <guiseq><gui>File</gui><gui>New</gui></guiseq>.</p></item>
+  <item><p>Enter the name of the website that you wish to create into the "Website Name" entry box.</p></item>
+  <item><p>Click on the dropdown box next to the text that says "Website Location". Click on "Other..." and select the directory that you would like to create the new website's directory inside of.</p></item>
+  <item><p>Click on the "Create" button.</p></item>
+</list>
+
+</page>

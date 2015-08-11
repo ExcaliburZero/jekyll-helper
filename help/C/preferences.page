@@ -30,6 +30,10 @@
         <td><p>Push command</p></td>
         <td><p>Sets the command that is run when the push button is clicked. Does not have a default value.</p></td>
     </tr>
+    <tr>
+        <td><p>New command</p></td>
+        <td><p>Sets the command that is run when a new website is created. The first entry is the section of the command that comes before the name of the website, while the second entry is the section of the command that comes after the name of the website. Defaults to <cmd>jekyll new</cmd> for the first entry, while the second entry is blank by default</p></td>
+    </tr>
 </table>
 
 </page>

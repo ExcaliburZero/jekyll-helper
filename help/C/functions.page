@@ -30,5 +30,9 @@
     <title><code>Push</code></title>
     <p>Runs the command that the user sets as the push command.</p>
   </item>
+  <item>
+    <title><code>New</code></title>
+    <p>Creates a new Jekyll website. See <link xref="new" /> for more information.</p>
+  </item>
 </terms>
 </page>
