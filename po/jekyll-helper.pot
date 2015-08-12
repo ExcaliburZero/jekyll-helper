@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-23 11:23-0400\n"
+"POT-Creation-Date: 2015-08-12 10:49-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,6 +23,50 @@ msgstr ""
 
 #: ../jekyll-helper.desktop.in.h:2
 msgid "A program that serves as a basic GUI for Jekyll"
+msgstr ""
+
+#: ../data/ui/NewJekyllHelperDialog.ui.h:1
+msgid "Jekyll Helper New Website"
+msgstr ""
+
+#: ../data/ui/NewJekyllHelperDialog.ui.h:2
+msgid "Create a new Jekyll Website"
+msgstr ""
+
+#: ../data/ui/NewJekyllHelperDialog.ui.h:3
+msgid "Website Name:"
+msgstr ""
+
+#: ../data/ui/NewJekyllHelperDialog.ui.h:4
+msgid "Website Location:"
+msgstr ""
+
+#: ../data/ui/NewJekyllHelperDialog.ui.h:5
+msgid "Cancel"
+msgstr ""
+
+#: ../data/ui/NewJekyllHelperDialog.ui.h:6
+msgid "Create"
+msgstr ""
+
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:1
+msgid "Jekyll Helper Preferences"
+msgstr ""
+
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:2
+msgid "_Serve command:"
+msgstr ""
+
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:3
+msgid "_Build command:"
+msgstr ""
+
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:4
+msgid "_Push command:"
+msgstr ""
+
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:5
+msgid "_New command:"
 msgstr ""
 
 #: ../data/ui/JekyllHelperWindow.ui.h:2
@@ -61,27 +105,12 @@ msgstr ""
 msgid "Status Area"
 msgstr ""
 
-#. Code for other initialization actions should be added here.
-#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:1
-msgid "Jekyll Helper Preferences"
-msgstr ""
-
-#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:2
-msgid "_Serve command:"
-msgstr ""
-
-#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:3
-msgid "_Build command:"
-msgstr ""
-
-#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:4
-msgid "_Push command:"
-msgstr ""
-
 #: ../data/ui/AboutJekyllHelperDialog.ui.h:1
-msgid "Copyright (C) 2015 <Christopher Wells> <cwellsny@nycap.rr.com>"
+msgid ""
+"Copyright (C) 2015 <Christopher Wells> <cwellsny@nycap.rr.com>\n"
+"Copyright (C) 2015 <Rui914>"
 msgstr ""
 
-#: ../jekyll_helper/__init__.py:38
+#: ../jekyll_helper/__init__.py:39
 msgid "Show debug messages (-vv debugs jekyll_helper_lib also)"
 msgstr ""

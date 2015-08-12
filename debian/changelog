@@ -1,12 +1,37 @@
+jekyll-helper (0.3.0a) vivid; urgency=medium
+
+  * Created program manual page
+  * Added Japanese translation
+  * Added ability to create new Jekyll websites
+  * Added info on creating new websites to help pages
+  * Changed author section of manual to contributors section
+  * Added development info to readme file
+  * Updated contributor info
+  * Added contributing file
+
+ -- Christopher Wells <cwellsny@nycap.rr.com>  Tue, 11 Aug 2015 22:37:42 -0400
+
 jekyll-helper (0.2.2) vivid; urgency=medium
 
-  * New release.
+  * Added German translation
+  * Added info on Launchpad entry and translation to README
+  * Fixed help pages issue
+  * Added installation instructions to README
 
  -- Christopher Wells <cwellsny@nycap.rr.com>  Mon, 08 Jun 2015 19:50:06 -0400
 
 jekyll-helper (0.2.1) vivid; urgency=medium
 
-  * New release.
+  * Updated translation template
+  * Updated screenshot of program
+  * Added link to the program's website in readme
+  * Updated links to the program's website
+  * Added more info to help pages
+  * Restructured main Jekyll functions
+  * Set Jekyll comands to only run if the selected directory exists
+  * Added a test for the directory setting function
+  * Restructed main functions a bit
+  * Fixed serving after close bug
 
  -- Christopher Wells <cwellsny@nycap.rr.com>  Sat, 23 May 2015 11:24:40 -0400
 

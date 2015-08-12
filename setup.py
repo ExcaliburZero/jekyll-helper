@@ -2,6 +2,7 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 ### BEGIN LICENSE
 # Copyright (C) 2015 <Christopher Wells> <cwellsny@nycap.rr.com>
+# Copyright (C) 2015 <Rui914>
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
 # in the Software without restriction, including without limitation the rights
@@ -142,7 +143,7 @@ class InstallAndUpdateDataDirectory(DistUtilsExtra.auto.install_auto):
 
 DistUtilsExtra.auto.setup(
     name='jekyll-helper',
-    version='0.2.2',
+    version='0.3.0a',
     license='MIT',
     author='Christopher Wells',
     author_email='cwellsny@nycap.rr.com',
