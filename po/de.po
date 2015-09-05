@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: jekyll-helper\n"
 "Report-Msgid-Bugs-To: Christopher Wells <cwellsny@nycap.rr.com>\n"
-"POT-Creation-Date: 2015-05-23 11:23-0400\n"
-"PO-Revision-Date: 2015-05-23 17:25+0000\n"
+"POT-Creation-Date: 2015-08-12 10:49-0400\n"
+"PO-Revision-Date: 2015-08-12 20:25+0000\n"
 "Last-Translator: Christopher Wells <cwellsny@nycap.rr.com>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-05-23 17:32+0000\n"
-"X-Generator: Launchpad (build 17514)\n"
+"X-Launchpad-Export-Date: 2015-09-05 15:12+0000\n"
+"X-Generator: Launchpad (build 17706)\n"
 
 #: ../jekyll-helper.desktop.in.h:1 ../data/ui/JekyllHelperWindow.ui.h:1
 msgid "Jekyll Helper"
@@ -23,7 +23,52 @@ msgstr "Jekyll Helfer"
 
 #: ../jekyll-helper.desktop.in.h:2
 msgid "A program that serves as a basic GUI for Jekyll"
-msgstr "Ein Programm, das eine einfache graphische Benutzeroberfläche für Jekyll ist"
+msgstr ""
+"Ein Programm, das eine einfache graphische Benutzeroberfläche für Jekyll ist"
+
+#: ../data/ui/NewJekyllHelperDialog.ui.h:1
+msgid "Jekyll Helper New Website"
+msgstr "Jekyll Helfer Neue Website"
+
+#: ../data/ui/NewJekyllHelperDialog.ui.h:2
+msgid "Create a new Jekyll Website"
+msgstr "Eine neue Jekyll Website erstellen"
+
+#: ../data/ui/NewJekyllHelperDialog.ui.h:3
+msgid "Website Name:"
+msgstr "Website Name:"
+
+#: ../data/ui/NewJekyllHelperDialog.ui.h:4
+msgid "Website Location:"
+msgstr "Website Verzeichnis Ort:"
+
+#: ../data/ui/NewJekyllHelperDialog.ui.h:5
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: ../data/ui/NewJekyllHelperDialog.ui.h:6
+msgid "Create"
+msgstr "Erstellen"
+
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:1
+msgid "Jekyll Helper Preferences"
+msgstr "Jekyll Helfer Vorlieben"
+
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:2
+msgid "_Serve command:"
+msgstr "_Dienenbefehl:"
+
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:3
+msgid "_Build command:"
+msgstr "_Bauenbefehl:"
+
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:4
+msgid "_Push command:"
+msgstr "_Schiebenbefehl:"
+
+#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:5
+msgid "_New command:"
+msgstr "_Neuebefehl:"
 
 #: ../data/ui/JekyllHelperWindow.ui.h:2
 msgid "_File"
@@ -61,27 +106,14 @@ msgstr "Schieben"
 msgid "Status Area"
 msgstr "Statusbereich"
 
-#. Code for other initialization actions should be added here.
-#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:1
-msgid "Jekyll Helper Preferences"
-msgstr "Jekyll Helfer Vorlieben"
-
-#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:2
-msgid "_Serve command:"
-msgstr "_Dienenbefehl:"
-
-#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:3
-msgid "_Build command:"
-msgstr "_Bauenbefehl:"
-
-#: ../data/ui/PreferencesJekyllHelperDialog.ui.h:4
-msgid "_Push command:"
-msgstr "_Schiebenbefehl:"
-
 #: ../data/ui/AboutJekyllHelperDialog.ui.h:1
-msgid "Copyright (C) 2015 <Christopher Wells> <cwellsny@nycap.rr.com>"
-msgstr "Copyright (C) 2015 <Christopher Wells> <cwellsny@nycap.rr.com>"
+msgid ""
+"Copyright (C) 2015 <Christopher Wells> <cwellsny@nycap.rr.com>\n"
+"Copyright (C) 2015 <Rui914>"
+msgstr ""
+"Copyright (C) 2015 <Christopher Wells> <cwellsny@nycap.rr.com>\n"
+"Copyright (C) 2015 <Rui914>"
 
-#: ../jekyll_helper/__init__.py:38
+#: ../jekyll_helper/__init__.py:39
 msgid "Show debug messages (-vv debugs jekyll_helper_lib also)"
 msgstr "Zeigt Fehlermeldungen (-vv Fehler suchen jekyll_helper_lib auch)"
