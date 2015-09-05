@@ -1,6 +1,6 @@
 [Desktop Entry]
-_Name=Jekyll Helper
-_Comment=A program that serves as a basic GUI for Jekyll
+Name=Jekyll Helper
+Comment=A program that serves as a basic GUI for Jekyll
 Categories=GNOME;Utility;
 Exec=jekyll-helper
 Icon=jekyll-helper

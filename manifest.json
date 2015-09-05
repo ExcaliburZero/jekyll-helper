@@ -6,7 +6,7 @@
             "desktop": "jekyll-helper.desktop"
         }
     },
-    "framework": "ubuntu-sdk-13.10",
+    "framework": "ubuntu-sdk-15.04",
     "maintainer": "Christopher Wells <cwellsny@nycap.rr.com>",
     "name": "com.ubuntu.developer.excaliburzero.jekyll-helper",
     "title": "Jekyll Helper",
