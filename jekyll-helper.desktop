@@ -6,3 +6,4 @@ Exec=jekyll-helper
 Icon=jekyll-helper
 Terminal=false
 Type=Application
+X-Ubuntu-Touch=true
