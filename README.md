@@ -1,24 +1,30 @@
-# jekyll-helper
-This is a program that serves as a basic GUI for Jekyll.
+# Jekyll Helper [![Travis CI Status](https://api.travis-ci.org/ExcaliburZero/jekyll-helper.svg)](https://travis-ci.org/ExcaliburZero/jekyll-helper) [![Coverage Status](https://coveralls.io/repos/ExcaliburZero/jekyll-helper/badge.svg?branch=master)](https://coveralls.io/r/ExcaliburZero/jekyll-helper?branch=master)
+
+Jekyll Helper is a GUI for the static website generator [Jekyll](http://jekyllrb.com/).
 
 ![Screenshot of Jekyll Helper](/data/media/screenshot.png)
 
-## Badges
-[![Travis CI Status](https://api.travis-ci.org/ExcaliburZero/jekyll-helper.svg)](https://travis-ci.org/ExcaliburZero/jekyll-helper) [![Coverage Status](https://coveralls.io/repos/ExcaliburZero/jekyll-helper/badge.svg?branch=master)](https://coveralls.io/r/ExcaliburZero/jekyll-helper?branch=master)
+#Table of Contents
+- [External Links](#external-links)
+- [Licensing](#licensing)
+- [Installation](#installation)
+  - [Linux](#linux)
+    - [PPA](#ppa)
+    - [Deb package](#deb-package)
+    - [Compile from source](#compile-from-source)
+  - [Other](#other)
+- [Development](#development)
+  - [Running from source](#running-from-source)
+  - [Translations](#translations)
+  - [Editing help pages](#editing-help-pages)
+  - [Updating program version](#updating-program-version)
 
-## Website
-- https://excaliburzero.github.io/jekyll-helper/
+## External Links
+- [Jekyll Helper's website](https://excaliburzero.github.io/jekyll-helper/)
+- [Jekyll Helper's Launchpad entry](https://launchpad.net/jekyll-helper)
 
 ## Licensing
-This program is licensed under The MIT License. See the LICENSE file for more information.
-
-## Launchpad entry
-This program has a Launchpad entry located at the following url:
-
-- https://launchpad.net/jekyll-helper
-
-## Translations
-This program uses Gettext for its translations and handles the creation of its translation files through the [translations section of its Launchpad entry](https://translations.launchpad.net/jekyll-helper). The translation files are then downloaded and added into the GitHub hosting of the program.
+This program is licensed under [The MIT License](https://opensource.org/licenses/MIT). See the [LICENSE](LICENSE) file for more information.
 
 ## Installation
 Below are some instructions on how to install Jekyll Helper. If there are any other installation instructions that should be added, then feel free to add them via a pull request.
@@ -53,6 +59,9 @@ The following is information regarding the development process for Jekyll Helper
 
 ### Running from source
 Jekyll Helper can be run via it's source code using Cannonical's Quickly program. In order to do so, you must first enter the jekyll-helper directory in the terminal and run the `quickly run` command.
+
+### Translations
+This program uses Gettext for its translations and handles the creation of its translation files through the [translations section of its Launchpad entry](https://translations.launchpad.net/jekyll-helper). The translation files are then downloaded and added into the GitHub hosting of the program.
 
 ### Editing help pages
 The help pages for Jekyll Helper are located in the `/help/C/ directory`. They use the [Mallard](http://projectmallard.org/1.0/) markup language.
