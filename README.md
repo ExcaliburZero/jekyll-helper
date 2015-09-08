@@ -9,8 +9,12 @@ Jekyll Helper is a GUI for the static website generator [Jekyll](http://jekyllrb
 - [Licensing](#licensing)
 - [Installation](#installation)
   - [Linux](#linux)
-    - [PPA](#ppa)
-    - [Deb package](#deb-package)
+    - [Debian-based Distros](#debian-based-distros)
+      - [PPA](#ppa)
+      - [Deb package](#deb-package)
+    - [Arch Linux](#arch-linux)
+      - [AUR](#aur)
+      - [Package from source](#package-from-source)
     - [Compile from source](#compile-from-source)
   - [Other](#other)
 - [Development](#development)
@@ -32,7 +36,8 @@ Below are some instructions on how to install Jekyll Helper. If there are any ot
 Note that before you install Jekyll Helper you should first install Jekyll. Without Jekyll installed, Jekyll Helper will still install, but it will not be able to perform any functions using Jekyll.
 
 ### Linux
-#### PPA
+#### Debian-based Distros
+##### PPA
 This program can be installed on Debian-based Linux distros through the following personal package archive `ppa:excaliburzero/jekyll-helper`. The commands to install it via that ppa are as follows:
 
 ```
@@ -41,8 +46,26 @@ sudo apt-get update
 sudo apt-get install jekyll-helper
 ```
 
-#### Deb package
+##### Deb package
 This program can also be installed on Debian-based Linux distros through the `.deb` packages that are included in the released versions of the program. The `.deb` packages for each version of the program can be found on the program's [releases page](https://github.com/ExcaliburZero/jekyll-helper/releases).
+
+#### Arch Linux
+##### AUR
+This program can be installed from the latest git through the Arch User Repository. It can be created from the AUR manually or through using an AUR client like Yaourt.
+
+The command to install it with Yaourt is the following:
+
+```
+yaourt jekyll-helper-git
+```
+
+##### Package from source
+This program can be packaged and installed for Arch Linux via its source code by running the following commands.
+
+```
+makepkg
+sudo pacman -U PACKAGEFILENAMEHERE
+```
 
 #### Compile from source
 This program can be compiled from it source code. It is generally packaged via Quickly, however it should be able to be compiled through other methods.
