@@ -6,24 +6,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jekyll-helper\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-05-23 11:23-0400\n"
 "PO-Revision-Date: 2015-08-09 07:33+0000\n"
-"Last-Translator: Rui <mrrst0914@gmail.com>\n"
+"Last-Translator: Rui <rui914t@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-09 07:36+0000\n"
-"X-Generator: Launchpad (build 17656)\n"
 
 #: ../jekyll-helper.desktop.in.h:1 ../data/ui/JekyllHelperWindow.ui.h:1
 msgid "Jekyll Helper"
-msgstr "Jekyll ヘルパー"
+msgstr "Jekyllヘルパー"
 
 #: ../jekyll-helper.desktop.in.h:2
 msgid "A program that serves as a basic GUI for Jekyll"
-msgstr "Jekyll用の基本的なGUIプログラム"
+msgstr "Jekyll管理用の基本的なGUIプログラム"
 
 #: ../data/ui/JekyllHelperWindow.ui.h:2
 msgid "_File"
@@ -47,7 +44,7 @@ msgstr "Jekyllのバージョン: "
 
 #: ../data/ui/JekyllHelperWindow.ui.h:7
 msgid "Serve"
-msgstr "サーブ"
+msgstr "管理"
 
 #: ../data/ui/JekyllHelperWindow.ui.h:8
 msgid "Build"
